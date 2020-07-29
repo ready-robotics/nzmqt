@@ -13,8 +13,7 @@ set(
     "Install path for nzmqtConfig.cmake"
 )
 
-find_package(ZeroMQ REQUIRED)
-find_package(cppzmq REQUIRED)
+find_package(cppzmq REQUIRED CONFIG)
 find_package(Qt5 REQUIRED COMPONENTS Core)
 
 # Needed for QT to resolve Q_OBJECT methods on link
@@ -33,7 +32,6 @@ target_include_directories(
     PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
     $<INSTALL_INTERFACE:include>
-    ${ZeroMQ_INCLUDE_DIR}
     ${cppzmq_INCLUDE_DIR}
     ${Qt5Core_INCLUDE_DIRS}
 )
@@ -58,7 +56,7 @@ target_sources(
 target_link_libraries(
     nzmqt
     PUBLIC
-    zmq
+    cppzmq
     Qt5::Core
 )
 
