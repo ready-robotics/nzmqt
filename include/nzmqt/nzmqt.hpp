@@ -338,7 +338,7 @@ namespace nzmqt
         // Deleting children is necessary, because otherwise the children are deleted after the context
         // which results in a blocking state. So we delete the children before the zmq::context_t
         // destructor implementation is called.
-        virtual ~ZMQContext();
+        ~ZMQContext();
 
         using zmqsuper::operator void*;
 
