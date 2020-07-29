@@ -12,7 +12,6 @@ set(nzmqt_VERSION 3.2.1)
 @PACKAGE_INIT@
 
 include(CMakeFindDependencyMacro)
-find_package(ZeroMQ REQUIRED)
 find_package(cppzmq REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Core)
 
