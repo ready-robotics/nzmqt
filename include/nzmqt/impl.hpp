@@ -604,7 +604,6 @@ NZMQT_INLINE void SocketNotifierZMQSocket::socketReadActivity()
 }
 
 
-
 /*
  * SocketNotifierZMQContext
  */
